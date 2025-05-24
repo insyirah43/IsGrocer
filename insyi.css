@@ -1,0 +1,243 @@
+body {
+  background-color: #cd99ac;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+h1 {
+  color: rgb(123, 70, 135);
+  text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  animation: fadeIn 2s ease-in-out;
+}
+
+h2{
+    color:rgb(141, 33, 92);
+    text-align: center;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+hr{
+    border : none;
+    height: 2px;
+    background-color: cadetblue;
+    margin: 20px;
+}
+
+nav{
+    display: flex;
+    text-align:center;
+    color: rgb(199, 133, 160);
+    background-color: lightseagreen;
+    padding: 10px  0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+  margin: 0 20px;
+  text-decoration:none;
+  color:rgb(141, 33, 92);
+  font-weight: bold;
+  padding: 8px 15px;
+  transition:ease-in-out ;
+  text-align:center;
+}
+
+nav a:hover{
+  background-color: #fff;
+  color:black;
+  border-radius: 5px;
+}
+
+p{
+    font-size:x-large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(237, 235, 233);
+    display:inline-block;
+}
+
+#homepage {
+background-image:url(https://img.freepik.com/premium-photo/ba-pink-cartoon-grocery-store-with-pink-awning-pink-walls_605022-73147.jpg);
+background-size: cover;
+background-size: 1500px;
+background-position: center;
+background-repeat: no-repeat;
+text-shadow: #333;
+text-align: center;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-size: xx-large;
+color:beige;
+height: 450px;
+}
+
+#products {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: larger;
+    height: 650px;
+    text-align: center;
+    border-image: auto;
+    image-orientation: unset;
+    background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20230704/pngtree-colorful-grocery-haul-a-shopping-cart-packed-with-nutritious-food-on-image_3729007.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+#product table{
+  display:grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+  padding:20px;
+}
+
+.product{
+  background-color:#f4b8de;
+  padding:15px;
+  border-radius:10px;
+  box-shadow:0 4px 8px rgba(0,0,0,0.2);
+  text-align:center;
+  transition: transform 0.3s;
+}
+
+.product:hover{
+  transform:scale(1.05)
+}
+
+.product img{
+  width:100%;
+  height:100%;
+  border-radius:25px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.product:hover{
+transform:scale(1.1) rotate(2deg);
+}
+
+button{
+  color:rgb(141, 33, 92) ;
+  background-color: #cd99ac;
+  border :2px solid rgb(141, 33, 92);
+  border-radius: 15px;
+  width: 50px;
+  font-weight: bolder;
+  cursor:pointer;
+  box-shadow:2px 2px 5px #333;
+}
+
+
+#promotions{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: larger;
+    text-decoration-thickness: 10px;
+    text-align: center;
+    color:rgb(97, 8, 35);
+}
+
+#promotions table{
+  display:grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+  padding:20px;
+  width:80%;
+  margin:0 auto;
+}
+
+#promotions img{
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  width:200px;
+  border-radius:10px;
+}
+
+#promotions p{
+  color:#8b3c6e;
+  font-size:1.2em;
+  font-weight: bold;
+}
+
+#order{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: larger;
+  color: rgb(24, 82, 117);
+  text-align: center;
+  background-color: rgb(235, 232, 208);
+}
+
+#order form{
+  max-width:600px;
+  margin:0 auto;
+}
+
+#order input, #order select{
+  width:100%;
+  padding:10px;
+  margin-bottom:10px;
+  border-radius: 5px;
+  border:1px solid #ccc;
+}
+
+#order input[type="submit"]{
+  background-color: deeppink;
+  color:aliceblue;
+  border:none;
+  cursor:pointer;
+}
+
+#order input[type="submit"]:hover{
+  background-color: blueviolet;
+}
+
+.paymentDetails{
+  display:none;
+  background-color:#f8f0f8 ;
+  padding:15px;
+  margin-top:10px;
+  margin-bottom:10px;
+  border-radius:10px;
+  box-shadow:0 2px 5px rgba(0,0,0,0.2);
+}
+
+#contact{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size:larger;
+  color: rgb(132, 55, 104);
+  text-align: center;
+  background-color: rgb(235, 232, 208);
+}
+
+#contact a{
+  color:rgb(132, 55, 104);
+  text-decoration: none;
+  font-size: large;
+}
+a:hover{
+  color:black;
+}
+
+#footer{
+  text-align: center;
+  color:rgb(141, 33, 92);
+  font-size:xx-large;
+}
+
+#footer p{
+  font-size:xx-small;
+  text-align: center;
+}
+
+img {
+  width: 200px;
+  border-radius: 10px;
+}
+

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title> I's Grocer</title>
+            <link rel="stylesheet" href="insyi.css">
+        </head>
+        <body>
+            <!--header-->
+            <h1>WELCOME TO I'S GROCER! </h1>
+            <h2>EVERYTHING you need are HERE</h2>
+            <hr>
+
+
+            <!--navigation button-->
+            <nav>
+                <a href="#homepage">Homepage</a>
+                <a href="#products">Products</a>
+                <a href="#promotions">Promotions</a>
+                <a href="#order">Order</a>
+                <a href="#contact">Contact Us</a>
+            </nav>
+
+
+            <!--Homepage-->
+            <section id="homepage">
+                <h1>About Us</h1>
+                <p> WELCOME TO I'S GROCER!</p>
+                <p> Our grocery shop offer various groceries.</p>
+                <p> Which our shop can be considered as ONE STOP CENTER.</p>
+                <p> We sell your DAILY NEEDS.</p>
+            </section>
+
+
+            <!--Products-->
+           <section id="products">
+        <h1>Our Products</h1>
+        <table>
+            <th width="450px">
+        <div class="product">
+            <h3 id="rice">Rice</h3>
+            <img id="riceImage" class="product-image" src="" alt="Rice">
+            <div id="riceText" class="product-text"></div>
+            <button onclick="prevImage('rice')">&#8592;</button>  
+            <button onclick="nextImage('rice')">&#8594;</button>  
+        </div>
+    </th>
+
+        <th width="450px">
+        <div class="product">
+            <h3 id="oil">Oil</h3>
+            <img id="oilImage" class="product-image" src="" alt="Oil">
+            <div id="oilText" class="product-text"></div>
+            <button onclick="prevImage('oil')">&#8592;</button>  
+            <button onclick="nextImage('oil')">&#8594;</button>
+        </div>
+    </th>
+        <th width="450px">
+        <div class="product">
+            <h3 id="bread">Bread</h3>
+            <img id="breadImage" class="product-image" src="" alt="Bread">
+            <div id="breadText" class="product-text"></div>
+            <button onclick="prevImage('bread')">&#8592;</button> 
+            <button onclick="nextImage('bread')">&#8594;</button>
+        </div>
+    </th>
+
+    <th width="450px">
+        <div class="product">
+            <h3 id="pCare">Personal Care</h3>
+            <img id="pCareImage" class="product-image" src="" alt="personal care">
+            <div id="pCareText" class="product-text"></div>
+            <button onclick="prevImage('pCare')">&#8592;</button> 
+            <button onclick="nextImage('pCare')">&#8594;</button>
+        </div>
+    </th>
+
+    <th width="450px">
+        <div class="product">
+            <h3 id="sCare">Skin Care</h3>
+            <img id="sCareImage" class="product-image" src="" alt="Skin Care">
+            <div id="sCareText" class="product-text"></div>
+            <button onclick="prevImage('sCare')">&#8592;</button> 
+            <button onclick="nextImage('sCare')">&#8594;</button>
+        </div>
+    </th>
+
+        </table>
+        <script>
+        const products = {
+            rice: [
+                {  
+                    img: "https://d3ih4j2n5zotw5.cloudfront.net/uploads/all/Pk3vJYxShhjIWIHBEuVmPwy8sdOwdmpAmGeyS0yY.jpg",
+                    text: "Beras Jati (5KG)<br><br>Price: RM 25<br><br>Weight: 5KG"
+                },
+                {
+                    img: "https://sindepco.com/wp-content/uploads/2024/08/rice-5.png.webp",
+                    text: "Beras Cap Rambutan (5KG)<br><br>Price: RM 16<br><br>Weight: 5KG"
+                },
+                {
+                    img: "https://klec.jayagrocer.com/cdn/shop/files/011139-1-1_c1521cb2-c5bb-48c8-8fe7-52996a1a65a8.jpg?v=1738832965",
+                    text: "Sunwhite Beras Wangi (5KG)<br><br>Price: RM 30<br><br>Weight: 5KG"
+                }
+            ],
+
+            oil: [
+                {
+                    img: "https://down-my.img.susercontent.com/file/my-11134207-7r98q-lnasqs6qzwcd0b",
+                    text: "Minyak Paket (1KG)<br><br>Price: RM 3<br><br>Weight: 1KG"
+                },
+                {
+                    img: "https://mymgtbe.mydin.my/media/catalog/product/cache/ea23624dd3dd1d412743d9df44c33835/a/b/ab49bd9438d5fa54b780ed016d3ea5159cd63331da8703785e72c82f272f99a0.jpeg",
+                    text: "Minyak Saji (5L)<br><br>Price: RM 30.50<br><br>Weight: 5L"
+                },
+                {
+                    img: "https://estore.midas.com.my/image/cache/product/11020004690_25012021140727-500x500.png",
+                    text: "Minyak Bijan (630ml)<br><br>Price: RM 12.30<br><br>Weight: 630ml"
+                }
+            ],
+
+            bread: [
+                {
+                    img: "https://cdn.store-assets.com/s/227701/i/16820152.jpeg?width=1024",
+                    text: "Gardenia White Bread<br><br>Price: RM 4.50<br><br>Weight: 600g"
+                },
+                {
+                    img: "https://www.mycs.com.my/media/catalog/product/cache/309b0699a74d76e0528e3f5ac801b2c4/m/a/massimo_roti_sandwich_jumbo_600g_front.png",
+                    text: "Massimo Wheat Germ<br><br>Price: RM 4.80<br><br>Weight: 600g"
+                },
+                {
+                    img: "https://cdn1.sgliteasset.com/ninetypl/images/product/product-4330395/N6nw8rqB66cef4244b665_1724838948.jpeg",
+                    text: "Mighty White Bread (55g)<br><br>Price: RM 1.80<br><br>Weight: 55g"
+                }
+            ],
+
+             pCare: [
+                {
+                    img: "https://down-my.img.susercontent.com/file/560d15bddb691047383975a37204b12f",
+                    text: "Lifebuoy Body Wash (950ml)<br><br>Price: RM 18.80<br><br>Weight: 950ml"
+                },
+                {
+                    img: "https://down-my.img.susercontent.com/file/my-11134207-7rasg-m8fvyhedk4l0d4.webp",
+                    text: "Darlie Toothbrush<br><br>Price: RM 12.50<br><br>Unit: 2 Units"
+                },
+                {
+                    img: "https://guardian.com.my/media/catalog/product/1/2/121095140_1_2.jpg?auto=webp&format=pjpg&width=640&fit=cover",
+                    text: "Sulsilk Smooth & Manageable Shampoo<br><br>Price: RM 17.25<br><br>Weight: 625ml"
+                }
+            ],
+            sCare: [
+                {
+                    img: "https://guardian.com.my/media/catalog/product/1/2/121088039_-_1.jpg?auto=webp&format=pjpg&width=640&fit=cover",
+                    text: "Hada Labo Hydra Whitening Face Wash<br><br>Price: RM 20.93<br><br>Weight: 100g"
+                },
+                {
+                    img: "https://kao-h.assetsadobe3.com/is/image/content/dam/sites/kao/www-kao-com/my/en/products/biore/bio_perfectblock_milk_00.jpg",
+                    text: "Biore UV Perfect Block Milk SPF50<br><br>Price: RM 18.50<br><br>Weight: 25ml"
+                },
+                {
+                    img: "https://guardian.com.my/media/catalog/product/s/a/safi-hydraglow-hl-oil-free-gel-moisturizer-25g_f1.jpg?auto=webp&format=pjpg&width=640&fit=cover",
+                    text: "Safi Hydra Glow<br><br>Price: RM 14.10<br><br>Weight: 25g"
+                }
+            ],
+            
+        };
+
+        let currentIndex = {
+            rice : 0,
+            oil : 0,
+            bread : 0,
+            pCare : 0,
+            sCare : 0
+        };
+
+        function updateProduct(type) {
+            const product = products[type][currentIndex[type]];
+            const imgEl = document.getElementById(type + "Image");
+            const textEl = document.getElementById(type + "Text");
+
+            imgEl.style.opacity = 0;
+            textEl.style.opacity = 0;
+
+            setTimeout(() => {
+                imgEl.src = product.img;
+                textEl.innerHTML = product.text;
+                imgEl.style.opacity = 1;
+                textEl.style.opacity = 1;
+            }, 300);
+        }
+
+        function nextImage(type) {
+            currentIndex[type] = (currentIndex[type] + 1) % products[type].length;
+            updateProduct(type);
+        }
+
+        function prevImage(type) {
+            currentIndex[type] = (currentIndex[type] - 1 + products[type].length) % products[type].length;
+            updateProduct(type);
+        }
+
+        window.onload = function () {
+            updateProduct("rice");
+            updateProduct("oil");
+            updateProduct("bread");
+            updateProduct("pCare");
+            updateProduct("sCare");
+        };
+            
+    </script>
+    </section>
+
+
+            <!--Promotions-->
+            <section id="promotions"> 
+                <h1>TODAY'S SPECIAL PROMOTIONS ! </h1>
+                <table>
+                    <tr>
+                    <th width="850px">
+                         <p>Buy 2 Ice Cream, get 1 free</p><br>
+                         <img src="https://www.onestop.co.uk/wp-content/uploads/2d15b28d-9c4c-4561-bd9b-b7c637cab143.png" alt="ice cream">
+                    </th>
+                    
+
+                    <th>
+                        <p>Ridsect for ONLY RM15 !!</p><br>
+                        <img src="https://down-my.img.susercontent.com/file/2e37e438210f408db4cf48ccb824d522">
+                    </th>
+                </tr>
+                </table>
+            </section>
+
+
+            <!--Order-->
+            <section id="order">
+                <h1>ORDER NOW</h1>
+                    <form>
+                 Name: <br><br>
+                    <input type="text" name="name" style="width:50%"><br><br>
+                Address:<br><br>
+                    <input type="text" name="address" style="width:50%"><br><br>
+                 Product: <br><br>
+                    <input type="text" name="products" style="width:50%"><br><br>
+                Quantity:<br><br>
+                     <input type="number" name="quantity" style="width:50%"><br><br>
+                
+                Payment Type:<br>
+                <select id="payment" name="payment">
+                    <option value="debitCard">Debit Card</option>
+                    <option value="ewallet">e-Wallet</option>
+                    <option value="onlineBank">Online Banking</option>
+                </select>
+
+                <!--debit card details-->
+                <div id="debitCard" class="paymentDetails">
+                    <h3>Debit Card Details</h3>
+                    Name On Card:<br><br>
+                    <input type="text" name="name" style="width:50%"><br><br>
+                    Card Number:<br><br>
+                    <input type="number" name="cardNum" style="width:50%"><br><br>
+                    Expiration Date (MM/YYYY):<br><br>
+                    <input type="number" name="expiry" style="width:50%"><br><br>
+                    CVV :<br><br>
+                    <input type="password" name="cvv" style="width:50%"><br><br>
+                </div>
+
+                <!--ewallet datails-->
+                <div id="ewallet" class="paymentDetails">
+                    <h3>E-Wallet Details</h3>
+                    E-Wallet:<br>
+                    <select>
+                        <option value="tng">Touch 'n Go</option>
+                        <option value="boost">Boost</option>
+                        <option value="shopeepay">Shopee Pay</option>
+                    </select><br><br>
+                    E-Wallet phone number:<br>
+                    <input type="number" style="width:50%"><br><br>
+                </div>
+
+                <!--Online banking details-->
+                <div id="onlineBank" class="paymentDetails">
+                    <h3>Online Banking Details</h3>
+                    Bank:
+                    <select>
+                        <option value="cimb">CiMB</option>
+                        <option value="maybank2u">Maybank</option>
+                        <option value="rhb">RHB</option>
+                    </select><br><br>
+
+                    Online Banking Username :
+                    <input type="text"style="width:35%"><br><br>
+                </div>
+
+                     <input type="submit" value="confirm Order">
+                     </form><br><br>
+
+                    <script>
+                        const payment = document.getElementById('payment');
+                        const debit= document.getElementById('debitCard');
+                        const ewallet = document.getElementById('ewallet');
+                        const onlineBank = document.getElementById('onlineBank');
+                    
+                        payment.addEventListener('change',function(){
+                            debit.style.display='none';
+                            ewallet.style.display='none';
+                            onlineBank.style.display='none';
+
+                            if(this.value==='debitCard')
+                            {
+                                debit.style.display='block';
+                            }
+                            else if(this.value==='ewallet')
+                            {
+                                ewallet.style.display='block';
+                            }
+                            else if(this.value==='onlineBank')
+                            {
+                                onlineBank.style.display='block';
+                            }
+                        });
+
+                    </script>
+            </section>
+
+
+            <!--Contact Us-->
+            <section id="contact">
+                 <h1> Contact Us</h1>
+                     <p><a href="https://www.google.com/maps/place/"> Locate Us : No 14,15,16,17, Jalan Kangar Jaya 14, Kangar Jaya, Jalan Tuanku Syed Putra, 01000 Kangar ,Perlis.</a></p><br>
+                     <p><a href="https://mail.google.com/"> Email : iigrocer@gmail.com</a></p><br><br>
+                     <p><a href="https://wa.me/qr/OTTZBW3FNKGMN1"> Phone : 011 30348568</a></p>
+            </section>
+
+    <footer>
+        <p style="color: rgb(141, 33, 92);">&copy; All rights reserved. <em>I's Grocer</em></p>
+        
+    </footer>
+    </html>
